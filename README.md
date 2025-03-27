@@ -17,6 +17,7 @@ This project implements an API that dynamically retrieves and executes automatio
 ### 1. Clone the Repository
 ```sh
 git clone https://github.com/ritvikraj115/ai_assignment.git
+cd ai-assignment
 ```
 
 ### 2. Create and Activate Virtual Environment (Optional but Recommended)
