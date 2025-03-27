@@ -28,7 +28,6 @@ def save_function_data(function_data):
 
 # Load existing function data on startup
 function_data = load_function_data()
-print(function_data)
 
 # Convert function descriptions into embeddings
 descriptions = [entry["description"] for entry in function_data]
