@@ -12,7 +12,7 @@ app = FastAPI()
 memory = SessionMemory()
 
 # File to store user-defined functions
-USER_FUNCTIONS_FILE = "../user_defined_func/functions.py"
+USER_FUNCTIONS_FILE = "user_defined_func/functions.py"
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
