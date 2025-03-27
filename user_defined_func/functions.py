@@ -1,5 +1,4 @@
 
 
-
 def greet():
-    return 'Hello, User!'
+    return 'hello'

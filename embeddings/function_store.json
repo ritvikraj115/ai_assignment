@@ -1,0 +1,50 @@
+[
+    {
+        "name": "open_chrome",
+        "description": "Opens Google Chrome browser for web browsing."
+    },
+    {
+        "name": "open_calculator",
+        "description": "Launches the system calculator."
+    },
+    {
+        "name": "open_notepad",
+        "description": "Opens Notepad (Windows) or Gedit (Linux)."
+    },
+    {
+        "name": "open_file_explorer",
+        "description": "Opens the system file explorer."
+    },
+    {
+        "name": "get_cpu_usage",
+        "description": "Retrieves current CPU usage percentage."
+    },
+    {
+        "name": "get_ram_usage",
+        "description": "Retrieves current RAM usage percentage."
+    },
+    {
+        "name": "get_disk_usage",
+        "description": "Retrieves disk usage statistics (used, total, percentage)."
+    },
+    {
+        "name": "get_battery_status",
+        "description": "Retrieves battery percentage and charging status."
+    },
+    {
+        "name": "run_shell_command",
+        "description": "Executes a shell command and returns output."
+    },
+    {
+        "name": "get_system_info",
+        "description": "Returns basic system information (OS, architecture)."
+    },
+    {
+        "name": "get_ip_address",
+        "description": "Returns the system's local IP address."
+    },
+    {
+        "name": "greet",
+        "description": "greet and welcomes the user"
+    }
+]

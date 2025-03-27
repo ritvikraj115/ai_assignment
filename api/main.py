@@ -34,6 +34,17 @@ async def execute_function(request: QueryRequest):
             raise HTTPException(status_code=400, detail="Prompt cannot be empty.")
 
         function_name = retrieve_function(request.prompt)
+        if(function_name==False):
+            # If the match is weak, check if the query is ambiguous
+            if memory.is_ambiguous(request.prompt):
+                last_function = memory.get_last_function()
+                if last_function:
+                    function_code = generate_execution_code(last_function)
+                    return {"function": last_function, "code": function_code}
+
+            # If it's not ambiguous but the match is weak, return None
+            return "No function found for your match"
+
 
         # If no function found, try using the last executed function from session memory
         if not function_name:
@@ -46,15 +57,6 @@ async def execute_function(request: QueryRequest):
 
         # Generate execution code
         function_code = generate_execution_code(function_name)
-
-        if request.execute:
-            try:
-                exec(function_code)  # Executes the function dynamically
-                logging.info(f"Executed function: {function_name}")
-                return {"function": function_name, "code": function_code, "status": "Executed"}
-            except Exception as e:
-                logging.error(f"Execution error: {str(e)}")
-                raise HTTPException(status_code=500, detail=f"Error executing function: {str(e)}")
 
         return {"function": function_name, "code": function_code}
 
