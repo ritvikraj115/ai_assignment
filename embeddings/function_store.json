@@ -46,5 +46,9 @@
     {
         "name": "greet",
         "description": "greet and welcomes the user"
+    },
+    {
+        "name": "get_disk_space",
+        "description": "Retrieves available and used disk space."
     }
 ]

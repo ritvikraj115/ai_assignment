@@ -69,10 +69,6 @@ def retrieve_function(user_query):
 
     query_embedding = embedding_model.encode([user_query])
     distances, match_idx = index.search(np.array(query_embedding), 1)
-    print("Function Data:", function_data)  # Ensure it's a list of tuples
-    print("Function Data Length:", len(function_data))  # Check list size
-    print("Match Index:", match_idx)  # Inspect FAISS result
-    print("Match Index Value:", match_idx[0][0])  # The actual index returned
 
     best_match = function_data[match_idx[0][0]]["name"]
 
